@@ -23,6 +23,7 @@
   flex: 1;
 }
 
+
 /* Form styles */
 form {
   max-width: 600px;
@@ -42,4 +43,7 @@ button {
   border: none;
   padding: 0.75rem;
   cursor: pointer;
+}
+.nav-link:hover {
+  background-color: #555;
 }
