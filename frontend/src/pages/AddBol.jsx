@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './AddBol.css';
 
-eexport default function AddBol() {
+export default function AddBol() {
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
       loadNumber: '',
