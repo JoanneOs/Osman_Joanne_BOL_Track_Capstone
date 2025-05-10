@@ -1,7 +1,11 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-require('dotenv').config();
+import express from 'express';
+import mongoose from 'mongoose';
+import cors from 'cors';
+import dotenv from 'dotenv';
+import bolRoutes from './routes/bolRoutes.js'; // Note the .js extension
+
+const PORT = process.env.PORT || 3000;
+dotenv.config();
 
 const app = express();
 app.use(cors());
@@ -17,7 +21,9 @@ app.get('/', (req, res) => {
   res.send('BOL Tracker API');
 });
 
-const PORT = process.env.PORT || 5000;
+// Routes
+app.use('/api/bols', bolRoutes);
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });

@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const bolSchema = new mongoose.Schema({
   loadNumber: { type: String, required: true, unique: true },
@@ -10,4 +10,4 @@ const bolSchema = new mongoose.Schema({
   status: { type: String, enum: ['Pending', 'Paid', 'Disputed'], default: 'Pending' }
 });
 
-module.exports = mongoose.model('Bol', bolSchema);
+export default mongoose.model('Bol', bolSchema);
